@@ -313,7 +313,7 @@ Geralmente a estrutura espacial contribui para a modelagem de duas formas:
         \item \textbf{Modelo de defasagem espacial (\textit{SAR -- Spatial Auto Regressive})}
         \vspace{0.5cm}
         \begin{block}{}
-            $$y = \rho Wy + \varepsilon $$
+            $$y = \rho Wy + \varepsilon \quad \text{ ou }\quad  y_i = \rho \sum_{j=1}^{n} w_{ij} y_j +  \varepsilon_i $$
         \end{block}
         \noindent em que $Wy$ é um vetor de defasagens espaciais (variável endógena)  e $\rho$ é o coeficiente auto-regressivo espacial. 
         \begin{itemize}
@@ -334,7 +334,7 @@ Geralmente a estrutura espacial contribui para a modelagem de duas formas:
         Incluindo variáveis exógenas (SAR misto)
         \vspace{0.2cm}
         \begin{block}{}
-            $$y = \rho Wy + X\beta + \varepsilon $$
+            $$y = \rho Wy + X\beta + \varepsilon  \quad \text{ ou }\quad  y_i = \rho \sum_{j=1}^{n} w_{ij} y_j + \sum_{j=1}^{p} x_{ij}\beta_j + \varepsilon_i$$
         \end{block}
         \noindent $X$ é a matriz de variáveis explicativas exógenas
     \end{itemize}
@@ -345,9 +345,9 @@ Geralmente a estrutura espacial contribui para a modelagem de duas formas:
         \item \textbf{Modelo de erro auto-regressivo espacial (\textit{SEM -- Spatial Error Model})}
         \vspace{0.5cm}
         \begin{block}{}
-            $$y = X\beta+ \xi $$  
+            $$y = X\beta+ \xi \quad \text{ ou }\quad  y_i = \sum_{j=1}^{p} x_{ij}\beta_j + \xi_i$$  
             
-            $$\xi = \lambda W \xi + \varepsilon$$
+            $$\xi = \lambda W \xi + \varepsilon \quad \text{ ou }\quad  \xi_i = \lambda \sum_{j=1}^{n} w_{ij} u_j + \varepsilon$$
         \end{block}
         \noindent 
         \begin{itemize}
@@ -368,9 +368,9 @@ Geralmente a estrutura espacial contribui para a modelagem de duas formas:
         Há interação na variável de interesse $y$ e no erro $\xi$.
         %\vspace{0.5cm}
         \begin{block}{}
-            $$y = \rho W_1y +  X\beta+ \xi $$  
+            $$y = \rho W_1y +  X\beta+ \xi \quad \text{ ou }\quad y_i = \rho \sum_{j=1}^{n} w_{1_{ij}} y_i + \sum_{j=1}^{p} x_{ij}\beta_j + \xi_i$$  
             
-            $$\xi = \lambda W_2 \xi + \varepsilon$$
+            $$\xi = \lambda W_2 \xi + \varepsilon \quad \text{ ou }\quad \xi_i = \lambda  \sum_{j=1}^{n} w_{2_{ij}} u_j + \varepsilon_1$$
         \end{block}
         \noindent $|\rho|<1$ e $|\lambda|<1$. 
     \end{itemize}
